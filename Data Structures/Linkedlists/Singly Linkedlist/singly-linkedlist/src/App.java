@@ -10,5 +10,11 @@ public class App {
         singlyLinkedlist.insertHead(11);
         singlyLinkedlist.insertHead(-7);
         singlyLinkedlist.insertHead(556);
+
+        singlyLinkedlist.removeHead();
+        singlyLinkedlist.removeHead();
+        singlyLinkedlist.removeHead();
+        singlyLinkedlist.removeHead();
+        singlyLinkedlist.removeHead(); // Removal error expected on empty/null singly linkedlist.
     }
 }

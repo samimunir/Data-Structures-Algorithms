@@ -49,4 +49,16 @@ public class SinglyLinkedlist {
         }
         printDSStats();
     }
+
+    public void removeHead() {
+        if (isEmpty()) {
+            System.out.println("\n--<ERROR>-- removeHead() called on empty singly linkedlist.");
+            printDSStats();
+        } else {
+            System.out.println("\nremoveHead(" + this.head.getData() + ") called --->");
+            this.head = this.head.getNext();
+            this.totalElements--;
+            printDSStats();
+        }
+    }
 }
