@@ -26,7 +26,7 @@ public class SinglyLinkedlist {
                 System.out.print(" -> " + currentNode.getData());
                 currentNode = currentNode.getNext();
             }
-            System.out.println("NULL");
+            System.out.println(" -> NULL");
         }
     }
 
@@ -34,5 +34,19 @@ public class SinglyLinkedlist {
         System.out.println("Singly Linkedlist DS Stats...");
         printDS();
         System.out.println("\t\ttotal elements: " + this.totalElements);
+    }
+
+    public void insertHead(int data) {
+        System.out.println("\ninsertHead(" + data + ") called --->");
+        if (isEmpty()) {
+            Node newNode = new Node(data, null);
+            this.head = newNode;
+            this.totalElements++;
+        } else {
+            Node newNode = new Node(data, this.head);
+            this.head = newNode;
+            this.totalElements++;
+        }
+        printDSStats();
     }
 }
