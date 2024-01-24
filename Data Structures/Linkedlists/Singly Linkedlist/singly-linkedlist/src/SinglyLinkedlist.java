@@ -61,4 +61,35 @@ public class SinglyLinkedlist {
             printDSStats();
         }
     }
+
+    public void insertTail(int data) {
+        System.out.println("\ninsertTail(" + data + ") called --->");
+        if (isEmpty()) {
+            Node newNode = new Node(data, null);
+            this.head = newNode;
+            this.totalElements++;
+        } else {
+            if (this.head.getNext() == null) {
+                Node newNode = new Node(data, null);
+                Node tempHead = this.head;
+                tempHead.setNext(newNode);
+                this.head = tempHead;
+                this.totalElements++;
+            } else {
+                Node tempHead = this.head;
+                Node currentNode = tempHead;
+                while (currentNode != null) {
+                    if (currentNode.getNext() == null) {
+                        break;
+                    }
+                    currentNode = currentNode.getNext();
+                }
+                Node newNode = new Node(data, null);
+                currentNode.setNext(newNode);
+                this.head = tempHead;
+                this.totalElements++;
+            }
+        }
+        printDSStats();
+    }
 }
