@@ -92,4 +92,31 @@ public class SinglyLinkedlist {
         }
         printDSStats();
     }
+
+    public void removeTail() {
+        if (isEmpty()) {
+            System.out.println("\n--<ERROR>-- removeTail() called on empty singly linkedlist.");
+            printDSStats();
+        } else {
+            if (this.head.getNext() == null) {
+                System.out.println("\nremoveTail(" + this.head.getData() + ") called...");
+                this.head = null;
+                this.totalElements--;
+            } else {
+                Node tempHead = this.head;
+                Node currentNode = tempHead;
+                while (currentNode != null) {
+                    if (currentNode.getNext().getNext() == null) {
+                        break;
+                    }
+                    currentNode = currentNode.getNext();
+                }
+                System.out.println("\nremoveTail(" + currentNode.getNext().getData() + ") called...");
+                currentNode.setNext(null);
+                this.head = tempHead;
+                this.totalElements--;
+            }
+            printDSStats();
+        }
+    }
 }

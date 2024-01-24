@@ -22,5 +22,12 @@ public class App {
         singlyLinkedlist.insertTail(-7);
         singlyLinkedlist.insertTail(556);
         singlyLinkedlist.insertTail(189);
+
+        singlyLinkedlist.removeTail();
+        singlyLinkedlist.removeTail();
+        singlyLinkedlist.removeTail();
+        singlyLinkedlist.removeTail();
+        singlyLinkedlist.removeTail();
+        singlyLinkedlist.removeTail();
     }
 }
