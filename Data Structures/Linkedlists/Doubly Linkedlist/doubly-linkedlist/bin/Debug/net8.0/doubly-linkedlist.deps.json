@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "doubly-linkedlist/1.0.0": {
+        "runtime": {
+          "doubly-linkedlist.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "doubly-linkedlist/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
