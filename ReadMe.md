@@ -5,4 +5,5 @@ Sami Munir | January 22nd, 2024 | Rutgers University | smunir01@outlook.com
 * Singly Linkedlist
     * Java
 * Doubly Linkedlist
+    * C#
 ## Algorithms
