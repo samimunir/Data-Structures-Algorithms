@@ -46,18 +46,18 @@ public class DoublyLinkedlist {
             this.tail = newNode;
             this.totalElements++;
         } else {
-            if (this.tail.GetNext() == null) {
+            if (this.head.GetNext() == null) {
                 Node newNode = new Node(data);
-                this.head.SetNext(newNode);
+                this.head.SetPrev(newNode);
                 newNode.SetNext(this.head);
-                newNode.SetPrev(null);
+                this.head = this.head.GetPrev();
                 this.tail = this.tail.GetNext();
                 this.totalElements++;
             } else {
                 Node newNode = new Node(data);
                 this.head.SetPrev(newNode);
                 newNode.SetNext(this.head);
-                newNode.SetPrev(null);
+                this.head = this.head.GetPrev();
                 this.totalElements++;
             }
         }
