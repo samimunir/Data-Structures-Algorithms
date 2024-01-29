@@ -37,4 +37,30 @@ public class DoublyLinkedlist {
         PrintDS();
         Console.WriteLine("\t\ttotalElements: " + this.totalElements);
     }
+
+    public void InsertHead(int data) {
+        Console.WriteLine("\nInsertHead(" + data + ") called --->");
+        if (IsEmpty()) {
+            Node newNode = new Node(data);
+            this.head = newNode;
+            this.tail = newNode;
+            this.totalElements++;
+        } else {
+            if (this.tail.GetNext() == null) {
+                Node newNode = new Node(data);
+                this.head.SetNext(newNode);
+                newNode.SetNext(this.head);
+                newNode.SetPrev(null);
+                this.tail = this.tail.GetNext();
+                this.totalElements++;
+            } else {
+                Node newNode = new Node(data);
+                this.head.SetPrev(newNode);
+                newNode.SetNext(this.head);
+                newNode.SetPrev(null);
+                this.totalElements++;
+            }
+        }
+        PrintDSStats();
+    }
 }
