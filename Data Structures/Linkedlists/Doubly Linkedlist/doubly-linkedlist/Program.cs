@@ -27,5 +27,11 @@
         doublyLinkedlist.RemoveTail();
         doublyLinkedlist.RemoveTail();
         doublyLinkedlist.RemoveTail(); // Removal error expected on empty/null doubly linkedlist.
+
+        doublyLinkedlist.InsertHead(2);
+        doublyLinkedlist.InsertTail(11);
+        doublyLinkedlist.InsertHead(-7);
+        doublyLinkedlist.InsertTail(556);
+        doublyLinkedlist.PrintDSReverse();
     }
 }

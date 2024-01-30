@@ -124,4 +124,19 @@ public class DoublyLinkedlist {
         }
         PrintDSStats();
     }
+
+    public void PrintDSReverse() {
+        Console.WriteLine("\nPrintDSReverse() called --->");
+        if (IsEmpty()) {
+            Console.WriteLine("\tNULL <-> (EMPTY) <-> HEAD");
+        } else {
+            Node currentNode = this.tail;
+            Console.Write("\tNULL");
+            while (currentNode != null) {
+                Console.Write(" <-> " + currentNode.GetData());
+                currentNode = currentNode.GetPrev();
+            }
+            Console.WriteLine(" <-> HEAD");
+        }
+    }
 }
