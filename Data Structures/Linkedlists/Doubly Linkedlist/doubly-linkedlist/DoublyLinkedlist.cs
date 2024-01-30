@@ -81,4 +81,22 @@ public class DoublyLinkedlist {
         }
         PrintDSStats();
     }
+
+    public void InsertLast(int data) {
+        Console.WriteLine("\ninsertTail(" + data + ") called --->");
+        if (IsEmpty()) {
+            Node newNode = new Node(data);
+            this.head = newNode;
+            this.tail = newNode;
+            this.totalElements++;
+        } else {
+            if (this.head.GetNext() == null) {
+                Node newNode = new Node(data);
+                newNode.SetPrev(this.head);
+                this.head.SetNext(newNode);
+                this.tail = this.tail.GetNext();
+                this.totalElements++;
+            }
+        }
+    }
 }
