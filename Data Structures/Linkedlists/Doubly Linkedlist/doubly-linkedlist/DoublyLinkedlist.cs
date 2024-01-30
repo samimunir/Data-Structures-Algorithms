@@ -96,6 +96,12 @@ public class DoublyLinkedlist {
                 this.head.SetNext(newNode);
                 this.tail = this.tail.GetNext();
                 this.totalElements++;
+            } else {
+                Node newNode = new Node(data);
+                newNode.SetPrev(this.tail);
+                this.tail.SetNext(newNode);
+                this.tail = this.tail.GetNext();
+                this.totalElements++;
             }
         }
         PrintDSStats();

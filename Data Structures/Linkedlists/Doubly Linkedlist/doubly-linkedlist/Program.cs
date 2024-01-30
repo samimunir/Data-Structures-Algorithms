@@ -19,5 +19,7 @@
 
         doublyLinkedlist.InsertTail(2);
         doublyLinkedlist.InsertTail(11);
+        doublyLinkedlist.InsertTail(-7);
+        doublyLinkedlist.InsertTail(556);
     }
 }
