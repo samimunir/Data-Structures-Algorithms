@@ -11,6 +11,10 @@
         doublyLinkedlist.InsertHead(-7);
         doublyLinkedlist.InsertHead(556);
 
-        // Removal error expected on empty/null singly linkedlist.
+        doublyLinkedlist.RemoveHead();
+        doublyLinkedlist.RemoveHead();
+        doublyLinkedlist.RemoveHead();
+        doublyLinkedlist.RemoveHead();
+        doublyLinkedlist.RemoveHead(); // Removal error expected on empty/null singly linkedlist.
     }
 }
