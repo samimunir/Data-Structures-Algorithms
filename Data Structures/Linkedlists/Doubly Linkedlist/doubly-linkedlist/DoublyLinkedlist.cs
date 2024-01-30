@@ -106,4 +106,22 @@ public class DoublyLinkedlist {
         }
         PrintDSStats();
     }
+
+    public void RemoveTail() {
+        if (IsEmpty()) {
+            Console.WriteLine("\n--<ERROR>-- removeTail() called on empty doubly linkedlist.");
+        } else {
+            Console.WriteLine("\nremoveTail(" + this.tail.GetData() + ") called --->");
+            if (this.head.GetNext() == null) {
+                this.head = null;
+                this.tail = null;
+                this.totalElements = 0;
+            } else {
+                this.tail = this.tail.GetPrev();
+                this.tail.SetNext(null);
+                this.totalElements--;
+            }
+        }
+        PrintDSStats();
+    }
 }

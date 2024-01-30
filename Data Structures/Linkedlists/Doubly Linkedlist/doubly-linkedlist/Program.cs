@@ -15,11 +15,17 @@
         doublyLinkedlist.RemoveHead();
         doublyLinkedlist.RemoveHead();
         doublyLinkedlist.RemoveHead();
-        doublyLinkedlist.RemoveHead(); // Removal error expected on empty/null singly linkedlist.
+        doublyLinkedlist.RemoveHead(); // Removal error expected on empty/null doubly linkedlist.
 
         doublyLinkedlist.InsertTail(2);
         doublyLinkedlist.InsertTail(11);
         doublyLinkedlist.InsertTail(-7);
         doublyLinkedlist.InsertTail(556);
+
+        doublyLinkedlist.RemoveTail();
+        doublyLinkedlist.RemoveTail();
+        doublyLinkedlist.RemoveTail();
+        doublyLinkedlist.RemoveTail();
+        doublyLinkedlist.RemoveTail(); // Removal error expected on empty/null doubly linkedlist.
     }
 }
