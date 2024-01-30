@@ -16,5 +16,8 @@
         doublyLinkedlist.RemoveHead();
         doublyLinkedlist.RemoveHead();
         doublyLinkedlist.RemoveHead(); // Removal error expected on empty/null singly linkedlist.
+
+        doublyLinkedlist.InsertTail(2);
+        doublyLinkedlist.InsertTail(11);
     }
 }

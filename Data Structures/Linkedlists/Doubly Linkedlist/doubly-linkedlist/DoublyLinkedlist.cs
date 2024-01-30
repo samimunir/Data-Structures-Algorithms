@@ -82,7 +82,7 @@ public class DoublyLinkedlist {
         PrintDSStats();
     }
 
-    public void InsertLast(int data) {
+    public void InsertTail(int data) {
         Console.WriteLine("\ninsertTail(" + data + ") called --->");
         if (IsEmpty()) {
             Node newNode = new Node(data);
@@ -98,5 +98,6 @@ public class DoublyLinkedlist {
                 this.totalElements++;
             }
         }
+        PrintDSStats();
     }
 }
