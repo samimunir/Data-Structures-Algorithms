@@ -69,6 +69,24 @@ void push(int data) {
     printDSStats();
 }
 
+void pop() {
+    if (isEmpty()) {
+        printf("\n--<ERROR>-- cannot pop from empty stack.\n");
+    } else {
+        printf("\npop(%d) called -->\n", tail -> data);
+        if (head -> next == NULL) {
+            head = tail = NULL;
+            totalElements = 0;
+        } else {
+            tail = tail -> prev;
+            // free(tail -> next);
+            tail -> next = NULL;
+            totalElements--;
+        }
+    }
+    printDSStats();
+}
+
 int main(int argc, char* argv[]) {
     printf("\nLinkedlist Stack - C\n");
     printf("--------------------\n");
@@ -79,6 +97,12 @@ int main(int argc, char* argv[]) {
     push(11);
     push(-7);
     push(556);
+
+    pop();
+    pop();
+    pop();
+    pop();
+    pop(); // REMOVAL ERROR: empty stack.
 
     return EXIT_SUCCESS;
 }
