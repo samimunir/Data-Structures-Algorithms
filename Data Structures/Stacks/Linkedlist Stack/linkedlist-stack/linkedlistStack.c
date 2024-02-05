@@ -26,7 +26,7 @@ void printDS() {
     } else {
         struct Node *currentNode = tail;
         while (currentNode != NULL) {
-            printf("\t%d\n", currentNode -> data);
+            printf("   %d\n", currentNode -> data);
             currentNode = currentNode -> prev;
         }
         printf("---------\n");
@@ -49,6 +49,16 @@ void push(int data) {
         head = newNode;
         tail = newNode;
         totalElements++;
+    } else {
+        struct Node *newNode = (struct Node*) malloc(sizeof(struct Node));
+        newNode -> data = data;
+        if (head -> next == NULL) {
+            newNode -> next = NULL;
+            newNode -> prev = head;
+            head -> next = newNode;
+            tail = tail -> next;
+            totalElements++;
+        }
     }
     printDSStats();
 }
@@ -58,6 +68,8 @@ int main(int argc, char* argv[]) {
     printf("--------------------\n");
 
     printDSStats();
+
+    push(2);
 
     return EXIT_SUCCESS;
 }
