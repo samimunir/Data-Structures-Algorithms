@@ -58,6 +58,12 @@ void push(int data) {
             head -> next = newNode;
             tail = tail -> next;
             totalElements++;
+        } else {
+            newNode -> next = NULL;
+            newNode -> prev = tail;
+            tail -> next = newNode;
+            tail = tail -> next;
+            totalElements++;
         }
     }
     printDSStats();
@@ -70,6 +76,9 @@ int main(int argc, char* argv[]) {
     printDSStats();
 
     push(2);
+    push(11);
+    push(-7);
+    push(556);
 
     return EXIT_SUCCESS;
 }
