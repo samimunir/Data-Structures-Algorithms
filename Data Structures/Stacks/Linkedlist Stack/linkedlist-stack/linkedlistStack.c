@@ -39,6 +39,20 @@ void printDSStats() {
     printf("\ttotalElements: %d\n", totalElements);
 }
 
+void push(int data) {
+    printf("\npush(%d) called -->\n", data);
+    if (isEmpty()) {
+        struct Node *newNode = (struct Node*) malloc(sizeof(struct Node));
+        newNode -> data = data;
+        newNode -> next = NULL;
+        newNode -> prev = NULL;
+        head = newNode;
+        tail = newNode;
+        totalElements++;
+    }
+    printDSStats();
+}
+
 int main(int argc, char* argv[]) {
     printf("\nLinkedlist Stack - C\n");
     printf("--------------------\n");
