@@ -19,6 +19,18 @@ struct TreeNode* createNode(int data) {
     return newNode;
 }
 
+struct TreeNode* insert(struct TreeNode *root, int data) {
+    if (root == NULL) {
+        return createNode(data);
+    }
+    if (data < root -> data) {
+        root -> left = insert(root -> left, data);
+    } else if (data > root -> data) {
+        root -> right = insert(root -> right, data);
+    }
+    return root;
+}
+
 int main(int argc, char* argv[]) {
     printf("Binary Tree - C\n");
     printf("---------------\n");
