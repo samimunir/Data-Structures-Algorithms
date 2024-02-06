@@ -9,4 +9,7 @@ Sami Munir | January 22nd, 2024 | Rutgers University | smunir01@outlook.com
     * Java
 * Doubly Linkedlist
     * C#
+### Trees
+* Binary Tree
+    * C
 ## Algorithms
