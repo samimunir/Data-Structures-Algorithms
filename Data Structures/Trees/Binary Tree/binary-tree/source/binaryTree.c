@@ -31,6 +31,14 @@ struct TreeNode* insert(struct TreeNode *root, int data) {
     return root;
 }
 
+void inorderTraversal(struct TreeNode *root) {
+    if (root != NULL) {
+        inorderTraversal(root -> left);
+        printf("%d ", root -> data);
+        inorderTraversal(root -> right);
+    }
+}
+
 int main(int argc, char* argv[]) {
     printf("Binary Tree - C\n");
     printf("---------------\n");
