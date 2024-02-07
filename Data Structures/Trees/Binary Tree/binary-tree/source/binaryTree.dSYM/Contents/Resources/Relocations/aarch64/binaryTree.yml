@@ -2,7 +2,11 @@
 triple:          'arm64-apple-darwin'
 binary-path:     '/Users/samimunir/Desktop/samimunir/Data Structures Algorithms/Data Structures/Trees/Binary Tree/binary-tree/source/binaryTree'
 relocations:
-  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: _createNode, symObjAddr: 0x0, symBinAddr: 0x100003E80, symSize: 0x70 }
-  - { offsetInCU: 0x7A, offset: 0x7A, size: 0x8, addend: 0x0, symName: _createNode, symObjAddr: 0x0, symBinAddr: 0x100003E80, symSize: 0x70 }
-  - { offsetInCU: 0xB0, offset: 0xB0, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x70, symBinAddr: 0x100003EF0, symSize: 0x48 }
+  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: _createNode, symObjAddr: 0x0, symBinAddr: 0x100003B58, symSize: 0x70 }
+  - { offsetInCU: 0x7A, offset: 0x7A, size: 0x8, addend: 0x0, symName: _createNode, symObjAddr: 0x0, symBinAddr: 0x100003B58, symSize: 0x70 }
+  - { offsetInCU: 0xB0, offset: 0xB0, size: 0x8, addend: 0x0, symName: _insert, symObjAddr: 0x70, symBinAddr: 0x100003BC8, symSize: 0xC8 }
+  - { offsetInCU: 0xE6, offset: 0xE6, size: 0x8, addend: 0x0, symName: _inorderTraversal, symObjAddr: 0x138, symBinAddr: 0x100003C90, symSize: 0x6C }
+  - { offsetInCU: 0x10A, offset: 0x10A, size: 0x8, addend: 0x0, symName: _findMin, symObjAddr: 0x1A4, symBinAddr: 0x100003CFC, symSize: 0x70 }
+  - { offsetInCU: 0x140, offset: 0x140, size: 0x8, addend: 0x0, symName: _deleteNode, symObjAddr: 0x214, symBinAddr: 0x100003D6C, symSize: 0x16C }
+  - { offsetInCU: 0x1CA, offset: 0x1CA, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x380, symBinAddr: 0x100003ED8, symSize: 0x48 }
 ...

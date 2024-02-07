@@ -67,13 +67,28 @@ struct TreeNode* deleteNode(struct TreeNode *root, int key) {
         }
         struct TreeNode *temp = findMin(root -> right);
         root -> data = temp -> data;
-        root -> right = deleteNode(root -> return, temp -> data);
+        root -> right = deleteNode(root -> right, temp -> data);
     }
+    return root;
 }
 
 int main(int argc, char* argv[]) {
     printf("Binary Tree - C\n");
     printf("---------------\n");
+
+    struct TreeNode *root = NULL;
+
+    root = insert(root, 50);
+    root = insert(root, 30);
+    root = insert(root, 20);
+    root = insert(root, 40);
+    root = insert(root, 70);
+    root = insert(root, 60);
+    root = insert(root, 80);
+
+    printf("Inorder traversal of the binary tree --> ");
+    inorderTraversal(root);
+    printf("\n");
 
     return EXIT_SUCCESS;
 }
