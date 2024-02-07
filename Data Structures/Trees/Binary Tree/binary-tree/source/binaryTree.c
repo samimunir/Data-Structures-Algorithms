@@ -39,6 +39,14 @@ void inorderTraversal(struct TreeNode *root) {
     }
 }
 
+struct TreeNode* findMin(struct TreeNode *node) {
+    struct TreeNode *current = node;
+    while (current && current -> left != NULL) {
+        current = current -> left;
+    }
+    return current;
+}
+
 struct TreeNode* deleteNode(struct TreeNode *root, int key) {
     if (root == NULL) {
         return root;
