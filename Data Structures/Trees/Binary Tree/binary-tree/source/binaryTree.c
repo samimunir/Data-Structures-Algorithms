@@ -39,6 +39,30 @@ void inorderTraversal(struct TreeNode *root) {
     }
 }
 
+struct TreeNode* deleteNode(struct TreeNode *root, int key) {
+    if (root == NULL) {
+        return root;
+    }
+    if (key < root -> data) {
+        root -> left = deleteNode(root -> left, key);
+    } else if (key > root -> data) {
+        root -> right = deleteNode(root -> right, key);
+    } else {
+        if (root -> left == NULL) {
+            struct TreeNode *temp = root -> right;
+            free(root);
+            return temp;
+        } else if (root -> right == NULL) {
+            struct TreeNode *temp = root -> left;
+            free(root);
+            return temp;
+        }
+        struct TreeNode *temp = findMin(root -> right);
+        root -> data = temp -> data;
+        root -> right = deleteNode(root -> return, temp -> data);
+    }
+}
+
 int main(int argc, char* argv[]) {
     printf("Binary Tree - C\n");
     printf("---------------\n");
